@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/89b54cf4ef.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <p>Programmer</p>
+                <h1>Hi, I'm Sascha <br> Schnackenberg <br> from Germany</h1>
+            </div>
+        </div>
+    </div>
+  <!----------about-------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>I have a deep passion for programming and problem-solving. My journey into the world of coding began at university, where I started with Java and continued to expand my knowledge ever since.
+
+                        One of my proudest achievements is building a fitness app. This app tracks my progress and visualizes it on a calendar, helping me stay motivated and focused on my fitness goals.
+                        
+                        Currently, I'm pursuing a degree in Business Intelligence Systems at the University of Hannover, with an expected graduation date in 2025. This field allows me to analyze data and derive insights to assist businesses in making informed decisions.
+                        
+                        Beyond my technical interests, I also have a love for travel and meeting new people.</p>
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                         </div>
+                         <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>App Development</span><br>Programming Apps</li>
+                                <li><span>Website</span><br>Hosting Websites</li>
+                                <li><span>Git</span><br>Working with Git and Maven</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2022-2023</span><br>Java</li>
+                                <li><span>2023</span><br>Springboot</li>
+                                <li><span>2023</span><br>SQL</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2017</span><br>Fachabitur</li>
+                                <li><span>2018</span><br>Freiwilligendienst</li>
+                                <li><span>2025</span><br>Bachelor of Science, Wiinfo </li>
+                            </ul>
+                         </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-----portfolio----->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Fitness App</h3>
+                    <p>My app 'similarstrength' is a hobby project aimed to learn programming. The app is based on Java and utilizes Spring Boot to communicate with the database.</p>
+                    <a href="https://github.com/SaschaCoffee/benchsquatdl"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Ebook</h3>
+                    <p>In 2020, a friend and I co-authored a biography book. The book focuses on the life of Paul Leonard, who was a prominent contributor to my blog.</p>
+                    <a href="https://www.amazon.de/gp/product/3000717587/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/edeka.png">
+                <div class="layer">
+                    <h3>Cooperation with Edeka</h3>
+                    <p>In 2023, we had the privilege of collaborating with Edeka Minden. Our team developed a simulation program tailored to optimize operations at one of their supermarkets.</p>
+                    <a href="https://www.linkedin.com/posts/edeka-minden-hannover_kooperation-innovation-hochschulbildung-activity-7191689888314875904-NM5g?utm_source=share&utm_medium=member_desktop"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------contact------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>neckbergcom@yahoo.com</p>
+
+            </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+
+                    <script>
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbw1SQHGII0_ocPksnZcEvqIUqTd1scXh82SgB0cTs5a_dvYA6km4zWk7aCez_rvt9NQ/exec'
+                        const form = document.forms['submit-to-google-sheet']
+                        var sendingData = new FormData(form)
+                      
+                        form.addEventListener('submit', e => {
+                          e.preventDefault()
+                          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                            .then(response => console.log('Success!', response))
+                            .catch(error => console.error('Error!', error.message))
+                        })
+                      </script>
+
+
+
+
+                </div>
+
+           
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab");
+
+
+        }
+    </script>
+
+
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+    
+
+</body>
+</html>
